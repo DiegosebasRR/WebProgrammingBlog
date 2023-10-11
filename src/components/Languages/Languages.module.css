@@ -1,0 +1,39 @@
+.container {
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "javascript javascript typescript kotlin"
+    "python java typescript kotlin"
+    "python java c_sharp c_sharp";
+  gap: 20px;
+}
+
+@media (max-width: 1300px) {
+  /* Cambia a un diseño de 2 columnas cuando el ancho de la pantalla sea menor o igual a 768px */
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "javascript javascript"
+      "python java"
+      "c_sharp c_sharp"
+      "typescript kotlin";
+  }
+}
+
+@media (max-width: 700px) {
+  /* Cambia a un diseño de 1 columna cuando el ancho de la pantalla sea menor o igual a 480px */
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "javascript"
+      "python"
+      "java"
+      "typescript"
+      "kotlin"
+      "c_sharp";
+  }
+}

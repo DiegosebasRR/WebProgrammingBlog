@@ -1,0 +1,74 @@
+.container {
+  width: 100%;
+  border-bottom: 1px solid #c1c1c188;
+}
+.navbar {
+  width: 70%;
+  height: 70px;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto, 3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "logo links links search";
+  gap: 20px;
+}
+
+.logo {
+  height: 70px;
+  width: 70px;
+  transition: all 0.3s;
+  grid-area: logo;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+.links {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  grid-area: links;
+}
+
+/* Oculta la barra de desplazamiento vertical en un elemento */
+.links::-webkit-scrollbar {
+  width: 0; /* Ancho de la barra de desplazamiento vertical */
+  height: 0;
+}
+
+.links::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color de la barra de desplazamiento */
+}
+
+.link > a {
+  font-size: 20px;
+  color: #9f9f9f;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.link:hover {
+  transition: all 0.3s;
+}
+.link:hover {
+  transform: scale(1.1);
+}
+
+.link > a:hover {
+  color: black;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    width: 90%;
+    height: 140px;
+    display: grid;
+    align-items: center;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "logo search search search"
+      "links links links links";
+    gap: 20px;
+  }
+}

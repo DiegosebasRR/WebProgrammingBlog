@@ -1,0 +1,45 @@
+.container {
+  background-color: #582bfb;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.socialMedia {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los íconos de redes sociales se envuelvan en varias filas si es necesario */
+  justify-content: center; /* Centra horizontalmente los íconos de redes sociales */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.socialIcon {
+  margin: 0 10px;
+  transition: all 0.3s;
+}
+
+.socialIcon:hover {
+  transform: scale(1.1);
+}
+
+.line {
+  flex-grow: 1;
+  border: 1px solid #fff;
+}
+
+.footerContent {
+  /* Estilos para el contenido del footer, como texto, enlaces, etc. */
+}
+
+.text {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Media queries para hacer el pie de página responsive */
+@media (max-width: 500px) {
+  .socialMedia {
+    flex-direction: column; /* Cambia la dirección de la columna cuando el ancho de la pantalla sea menor o igual a 768px */
+    align-items: center;
+  }
+}

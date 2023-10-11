@@ -1,0 +1,27 @@
+.container {
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 0px 10px rgb(128, 128, 128);
+  transition: all 0.3s;
+}
+
+.container:hover {
+  transform: scale(1.04);
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.img {
+  height: 75%;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}

@@ -1,0 +1,9 @@
+.container {
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
